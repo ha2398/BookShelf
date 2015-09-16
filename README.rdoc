@@ -1,5 +1,22 @@
 == README
 
+	[HW1 - 9]
+	
+	Maker Faire Meetup at the new littleBits Store in NYC
+	Tags: Eletronics, DIY (Do it yourself), Arduino, Makers, Open Hardware, DIY Technology
+	
+	FEATURED PANEL
+
+	BETHANY KOBY 
+	
+	Bethany Koby is a mom, CEO, designer and educator interested in creating brands, businesses and experiences that help imaging a more positive and collaborative future. In 2012 she co-founded Technology Will Save Us.
+
+	FRANCIS BITONTI
+
+	Designer Francis Bitonti is ushering in a new manufacturing paradigm through his blend of computational design techniques and emerging manufacturing technologies.  Blurring the line between design and technology, Bitonti’s trademark process merges cutting edge digital design and manufacturing technologies, aimed to transform industrialized production systems.
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
