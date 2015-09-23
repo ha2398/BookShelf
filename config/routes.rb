@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :users
+  resources :sessions
+
   get 'welcome/index' => 'welcome#index'
   get 'home' => 'welcome#index'
   get "signup" => "users#new", :as => "signup"
