@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email])
     if user
       session[:user_id] = user.id
-      session[:user] = user
+      #session[:user] = user
       redirect_to users_path
     else
       render "new"
