@@ -1,7 +1,7 @@
 class Author
   include Mongoid::Document
 
-  embeds_many :books
+  embedded_in :books
 
   field :first_name, type: String
   field :last_name, type: String
