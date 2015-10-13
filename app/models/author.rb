@@ -7,4 +7,8 @@ class Author
   field :last_name, type: String
   field :gender, type: String
   field :country, type: String
+
+  validates :first_name, :presence => { :message => "You must provide a first name."}
+  validates :last_name, :presence => { :message => "You must provide a last name."}
+
 end
