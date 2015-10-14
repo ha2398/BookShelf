@@ -44,6 +44,14 @@
 
 #########################################################################################
 
+	[HW3 - Correction]
+
+	Models created in part 3 are updated as follows:
+
+	User has_many books.
+	Book has one author.
+	Author: Belongs to boks.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
