@@ -24,11 +24,14 @@ class BooksController < ApplicationController
   # POST /books
   # POST /books.json
   def create
+    #book_params.author = Author.first
     @book = Book.new(book_params)
+    puts Author.first.full_name
+    @book.author = Author.first
 
     respond_to do |format|
       if @book.save
-        format.html { redirect_to @book, notice: 'Book was successfully created.' }
+        format.html { redirect_to @book, notice: 'Book was successfully created.'}
         format.json { render :show, status: :created, location: @book }
       else
         format.html { render :new }
@@ -59,6 +62,10 @@ class BooksController < ApplicationController
       format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def addtolist
+    
   end
 
   private

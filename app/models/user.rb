@@ -2,6 +2,7 @@ class User
   include Mongoid::Document
 
   has_many :books
+  has_many :lists
 
   field :first_name, type: String
   field :last_name, type: String

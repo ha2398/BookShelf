@@ -27,6 +27,18 @@
     <%= f.label :genre %><br>
     <%= f.text_field :genre %>
   </div>
+
+  <div class="panel panel-default">
+        <div class="panel-body">
+            <%= f.label :author %><br>
+            <%=
+              #@authors = Author.all
+              f.collection_select(:author_id, Author.all, :id, :full_name, prompt: "Select from existing authors")
+            %>
+            <br><br>
+          </div>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
