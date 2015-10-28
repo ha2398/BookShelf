@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :require_user, :only => [:show]
 
   # GET /lists
   # GET /lists.json
@@ -70,6 +71,6 @@ class ListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
-      params.require(:list).permit(:title)
+      params.require(:list).permit(:title, :description)
     end
 end
