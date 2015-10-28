@@ -1,7 +1,7 @@
 class Author
   include Mongoid::Document
 
-  belongs_to :books
+  has_many :books
 
   field :first_name, type: String
   field :last_name, type: String

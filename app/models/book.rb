@@ -2,7 +2,7 @@ class Book
   include Mongoid::Document
 
   belongs_to :user
-  has_one :author
+  belongs_to :author
   
   field :title, type: String
   field :pages, type: Integer

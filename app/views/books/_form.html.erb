@@ -31,10 +31,7 @@
   <div class="panel panel-default">
         <div class="panel-body">
             <%= f.label :author %><br>
-            <%=
-              #@authors = Author.all
-              f.collection_select(:author_id, Author.all, :id, :full_name, prompt: "Select from existing authors")
-            %>
+            <%= f.select(:author_id, Author.all.collect {|author| [author.full_name, author.id]}) %>
             <br><br>
           </div>
     </div>

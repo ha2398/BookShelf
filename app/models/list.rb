@@ -4,4 +4,5 @@ class List
   belongs_to :user
   
   field :title, type: String
+  field :description, type: String
 end
