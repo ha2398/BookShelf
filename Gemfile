@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'mongoid', '~> 5.0.0'
 
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use SCSS for stylesheets

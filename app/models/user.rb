@@ -9,6 +9,11 @@ class User
   field :gender, type: String
   field :email, type: String
 
+  field :website, type: String
+  field :facebook, type: String
+  field :github, type: String
+  field :twitter, type: String
+
   def full_name
     [first_name, last_name].join(' ')
   end
