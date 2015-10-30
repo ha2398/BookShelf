@@ -1,0 +1,25 @@
+<%= form_for(@listbook) do |f| %>
+  <% if @listbook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listbook.errors.count, "error") %> prohibited this listbook from being saved:</h2>
+
+      <ul>
+      <% @listbook.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :"Select Book" %><br>
+    <%= f.select(:book_id, @current_user.books.collect {|book| [book.title, book.id]}) %>
+    <br><br>
+    <%#= f.hidden_field(:list_id, :value => @current_list_id) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Add Book"%>
+  </div>
+          
+<% end %>

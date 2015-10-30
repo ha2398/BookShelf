@@ -20,6 +20,8 @@ class ListsController < ApplicationController
 
   # GET /lists/1/edit
   def edit
+    session[:current_list_id] = @list.id.to_s
+    session[:current_list] = List.find(@list.id)
   end
 
   # POST /lists

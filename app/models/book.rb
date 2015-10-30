@@ -3,6 +3,7 @@ class Book
 
   belongs_to :user
   belongs_to :author
+  has_many :listbook
   
   field :title, type: String
   field :pages, type: Integer

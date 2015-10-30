@@ -15,5 +15,41 @@
   <%= @list.user.full_name %>
 </p>
 
-<%= link_to 'Edit', edit_list_path(@list) %> |
+<p>
+	<strong>Books:</strong>
+</p>
+
+<table border=1 cellpadding="3">
+  <% if @list.listbook.empty? %>
+  <tr><td>This list is empty</td></tr>
+  <% else %>
+  <tr>
+    <th>Title</th>
+     <th>Pages</th>
+     <th>Isbn</th>
+     <th>Genre</th>
+     <th>Author</th>
+  </tr>
+  <% end %>
+  <% @list.listbook.each do |listbook| %>
+  <% @book = Book.find(listbook.book_id) %>
+    <tr>
+     <td><%= @book.title %></td>
+      <td><%= @book.pages %></td>
+      <td><%= @book.isbn %></td>
+      <td><%= @book.genre %></td>
+      <td><%= @book.author.full_name %></td>
+    </tr>
+    <% end %>
+
+  </table>
+
+  <br>
+
 <%= link_to 'Back', lists_path %>
+
+<style>
+td, th {
+  padding: 5px;
+}
+</style>

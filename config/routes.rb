@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :listbooks
   resources :lists
   resources :authors
   resources :books
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
   post 'login' => "sessions#create"
   get "logout" => "sessions#destroy", :as => "logout"
   get 'dashboard/index'
+  post 'addToList' => 'users#addToList', :as =>"addToList"
+  #get 'addToList' => 'users#addToList', :as =>"addToList"
 		
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
