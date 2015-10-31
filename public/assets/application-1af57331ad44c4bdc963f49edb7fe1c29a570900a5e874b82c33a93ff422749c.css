@@ -22,17 +22,5 @@
  }
 
  table {
- 	border: 1px solid gray;
-    border-collapse: collapse;
-    margin: auto;
- }
-
- td, th {
- 	padding: 5px !important;
  	border: 1px dotted gray;
- 	margin: 5px;
- }
- a {
- 	text-decoration: none;
- 	color: cornflowerblue;
  }
